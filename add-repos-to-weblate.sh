@@ -37,7 +37,7 @@ githubReposC | jq -c '.[] |
   if [[ -n "$CONNECTOR_NAME" && "$REPO_NAME" != "$CONNECTOR_NAME" ]]; then
     continue
   fi
-
+  echo "Adding repo $REPO_NAME as component..."
   addWeblateComponent "$REPO_NAME" "$REPO_URL" "$WEBLATE_URL" "$WEBLATE_TOKEN" "$WEBLATE_PROJECT"
 
   addGithubWebhook "$org" "$REPO_NAME" "$WEBLATE_URL"
