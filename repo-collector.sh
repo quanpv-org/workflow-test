@@ -5,6 +5,7 @@ ignored_repos=(
   "market"
   "market-monitor"
   "demo-projects"
+  "workflow-test"
 )
 
 org=quanpv-org
