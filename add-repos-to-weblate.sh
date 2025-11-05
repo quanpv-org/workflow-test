@@ -5,6 +5,10 @@ WEBLATE_PROJECT="${WEBLATE_PROJECT:-axonivy-marketplace}"
 WEBLATE_URL="${WEBLATE_URL:-https://hosted.weblate.org}"
 WEBLATE_TOKEN="${WEBLATE_TOKEN:-}"
 
+echo "Starting to add repositories to Weblate project: $WEBLATE_PROJECT"
+echo "Using Weblate URL: $WEBLATE_URL"
+echo "Using Connector Name filter: ${CONNECTOR_NAME:-<none>}"
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "${DIR}/repo-collector.sh"
 source "${DIR}/weblate-functions.sh"
