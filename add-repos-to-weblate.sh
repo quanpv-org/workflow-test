@@ -6,9 +6,9 @@ WEBLATE_URL="${WEBLATE_URL:-https://hosted.weblate.org}"
 WEBLATE_TOKEN="${WEBLATE_TOKEN:-}"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-source "${DIR}/../repo-collector.sh"
-source "${DIR}/../weblate-functions.sh"
-source "${DIR}/../github-webhook-functions.sh"
+source "${DIR}/repo-collector.sh"
+source "${DIR}/weblate-functions.sh"
+source "${DIR}/github-webhook-functions.sh"
 
 isIgnored() {
   local repo=$1
