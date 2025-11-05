@@ -50,6 +50,7 @@ jobs:
           WEBLATE_TOKEN: ${{ inputs.weblate_token }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          chmod +x add_repos_to_weblate.sh
+          chmod +x add-repos-to-weblate.sh
 
-          ./add_repos_to_weblate.sh
+          ./add-repos-to-weblate.sh
+
