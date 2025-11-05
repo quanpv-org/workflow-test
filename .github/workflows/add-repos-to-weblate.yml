@@ -42,12 +42,6 @@ jobs:
         run: |
           gh --version
 
-      - name: Authenticate GitHub CLI
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "$GITHUB_TOKEN" | gh auth login --with-token
-
       - name: Add repositories to Weblate
         env:
           CONNECTOR_NAME: ${{ inputs.connector_name }}
@@ -57,4 +51,5 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           chmod +x add_repos_to_weblate.sh
+
           ./add_repos_to_weblate.sh
